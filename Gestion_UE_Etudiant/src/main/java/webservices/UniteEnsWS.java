@@ -56,5 +56,44 @@ public class UniteEnsWS {
         }else return
                 Response.status(400).entity("object not updated").build();
     }
+    @Path("/{code}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUEByCode(@PathParam("code") int code) {
+
+        UniteEnseignement ue = helper.getUEByCode(code);
+
+        if (ue != null) {
+            return Response.status(200)
+                    .entity(ue)
+                    .build();
+        } else {
+            return Response.status(404)
+                    .entity("UE not found")
+                    .build();
+        }
+    }
+
+    @Path("/domaine/{domaine}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUEByDomaine(
+            @PathParam("domaine") String domaine) {
+
+        return Response.status(200)
+                .entity(helper.getUEByDomaine(domaine))
+                .build();
+    }
+
+    @Path("/semestre/{semestre}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUEBySemestre(
+            @PathParam("semestre") int semestre) {
+
+        return Response.status(200)
+                .entity(helper.getUEBySemestre(semestre))
+                .build();
+    }
 }
 //marwa was here
