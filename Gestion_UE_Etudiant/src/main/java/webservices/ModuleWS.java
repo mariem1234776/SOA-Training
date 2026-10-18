@@ -20,7 +20,10 @@ public class ModuleWS {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll(){
-        return Response.status(200).entity(helper.getAllModules()).build();
+
+        return Response.status(200)
+                .entity(helper.getAllModules())
+                .build();
     }
 
     @Path("/add")

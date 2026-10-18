@@ -9,8 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 @Path("/ue")
 public class UniteEnsWS {
-    static UniteEnseignementBusiness helper=
-            new UniteEnseignementBusiness();
+    static UniteEnseignementBusiness helper= new UniteEnseignementBusiness();
     @Secured
     @Path("/list")
     @GET
