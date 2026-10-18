@@ -22,6 +22,7 @@ public class ModuleService {
                 .entity(module)
                 .build();
     }
+
     @POST
     @Path("/add")
     @Produces(MediaType.APPLICATION_JSON)
@@ -32,6 +33,7 @@ public class ModuleService {
                 .entity(new ModuleBusiness().addModule(module))
                 .build();
     }
+
     @GET
     @Path("/type")
     @Produces(MediaType.APPLICATION_JSON)

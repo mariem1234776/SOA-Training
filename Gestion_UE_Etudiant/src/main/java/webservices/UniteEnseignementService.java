@@ -23,6 +23,7 @@ public class UniteEnseignementService {
                 .entity(ue)
                 .build();
     }
+
     @POST
     @Path("/add")
     @Produces(MediaType.APPLICATION_JSON)
@@ -34,6 +35,7 @@ public class UniteEnseignementService {
                 .entity(new UniteEnseignementBusiness().addUniteEnseignement(ue))
                 .build();
     }
+
     @GET
     @Path("/domaine/{domaine}")
     @Produces(MediaType.APPLICATION_JSON)

@@ -1,6 +1,9 @@
 package entities;
 
+import java.util.Objects;
+
 public class UniteEnseignement {
+
     private int code;
     private String domaine;
     private String responsable;
